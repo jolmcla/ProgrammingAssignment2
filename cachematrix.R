@@ -1,16 +1,16 @@
-# makeCacheMatrix creates a list with a function to\par
-# set the value of the matrix and get the value of the matrix\par
-#and get the value of inverse of the matrix\par
-makeCacheMatrix <- function(x = matrix()) \{\par
-    inv <- NULL\par
-    set <- function(y) \{\par
-        x <<- y\par
-        inv <<- NULL\par
-    \}\par
-    get <- function() x\par
-    setinverse <- function(inverse) inv <<- inverse\par
-    getinverse <- function() inv\par
-    list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)\par
-\}\par
-\par
+# makeCacheMatrix creates a list with a function to
+# set the value of the matrix and get the value of the matrix
+#and get the value of inverse of the matrix
+makeCacheMatrix <- function(x = matrix()) {
+    inv <- NULL
+    set <- function(y) {
+        x <<- y
+        inv <<- NULL
+    }
+    get <- function() x
+    setinverse <- function(inverse) inv <<- inverse
+    getinverse <- function() inv
+    list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
+}
+
 }
